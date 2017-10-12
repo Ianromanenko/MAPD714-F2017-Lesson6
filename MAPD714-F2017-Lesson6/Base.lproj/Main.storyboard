@@ -110,6 +110,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="veE-Sd-ppF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GDS-mT-WU1" id="yhb-7y-4Tj"/>
+                                    <outlet property="delegate" destination="GDS-mT-WU1" id="EAe-h9-eFq"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oo-kp-bKm">
                                 <rect key="frame" x="164" y="202" width="46" height="30"/>
@@ -117,6 +121,9 @@
                                     <constraint firstAttribute="height" constant="30" id="1Qg-9q-e1B"/>
                                 </constraints>
                                 <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="OnButtonPressed:" destination="GDS-mT-WU1" eventType="touchUpInside" id="7fp-mo-Vd2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +139,9 @@
                         <viewLayoutGuide key="safeArea" id="bG4-uy-I8V"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="JU7-Hj-lkV"/>
+                    <connections>
+                        <outlet property="singlePicker" destination="veE-Sd-ppF" id="eVC-9c-va3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEn-Sf-dwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
