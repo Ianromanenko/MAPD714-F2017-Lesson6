@@ -73,6 +73,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEC-rF-OX5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UGM-3N-Jvz" id="8cE-E9-HER"/>
+                                    <outlet property="delegate" destination="UGM-3N-Jvz" id="2uP-qP-5wt"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAe-wa-k8c">
                                 <rect key="frame" x="164" y="190" width="46" height="30"/>
@@ -80,6 +84,9 @@
                                     <constraint firstAttribute="height" constant="30" id="KPd-to-Q4F"/>
                                 </constraints>
                                 <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="OnButtonPressed:" destination="sn8-R9-Os4" eventType="touchUpInside" id="H55-C5-f3O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,6 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="SwN-qz-6vV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="Ucb-M8-eMZ"/>
+                    <connections>
+                        <outlet property="DoublePickerView" destination="TEC-rF-OX5" id="kuS-mz-FGn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ri-l4-qKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
